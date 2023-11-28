@@ -1,0 +1,34 @@
+{ 
+    "pageTitle": "Monthly Plan List",
+   "table": {
+        "dataSource":"api/users",
+        "tableColumns": [
+            {
+                "key": "select",
+                "title": "Select"
+            },
+            {
+                "key": "planname",
+                "title": "Plan Name"
+            },
+            {
+                "key": "patientrange",
+                "title": "Patient Range"
+            },
+            {
+                "key": "branchRange",
+                "title": "Branch Range"
+            },
+            {
+                "key": "montlycost",
+                "title": "Montly Cost"
+            },
+            {
+                "key": "description",
+                "title": "Description"
+            }
+
+
+        ]
+    }
+}

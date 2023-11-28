@@ -1,0 +1,89 @@
+{
+    "pageTitle": "Patients",
+    "breadcrumbs": [
+        {
+            "menuName": "Dashboard",
+            "url": "/app/landing"
+        },
+        {
+            "menuName": "Agency Info",
+            "url": ""
+        },
+        {
+            "menuName": "Providers",
+            "url": ""
+        }
+    ],
+    "pageActions": [
+        {
+            "type": "button",
+            "label": "Add new User",
+            "icon": "plus",
+            "event": {
+                "type": "click",
+                "onevent": "popup",
+                "popupJson": "add-demo-request.json"
+            }
+        },
+        {
+            "action": "refresh"
+        },
+        {
+            "action": "export"
+        },
+        {
+            "action": "filter"
+        }
+    ],
+    "filter": [
+        {
+            "name": "searcinvoice",
+            "type": "text",
+            "placeholder": "Search Invoice"
+        },
+        {
+            "name": "selectstatus",
+            "type": "select",
+            "placeholder": "Select Status"
+        },
+        {
+            "name": "datefrom",
+            "type": "date",
+            "placeholder": "Date From"
+        },
+        {
+            "name": "dateto",
+            "type": "date",
+            "placeholder": "Date To"
+        },
+        {
+            "name":"viewinvoice",
+            "type":"button",
+            "placeholder":"View Invoice"
+        }
+        
+        
+    ],
+    "table": {
+        "dataSource":"api/users",
+        "tableColumns": [
+            {
+                "key": "providername",
+                "title": "Provider Name"
+            },
+            {
+                "key": "npi",
+                "title": "NPI"
+            },
+            {
+                "key": "email",
+                "title": "Email"
+            },
+            {
+                "key":"mobile",
+                "title":"Mobile"
+            }
+            
+        ]
+    }
+}

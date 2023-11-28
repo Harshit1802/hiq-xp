@@ -1,0 +1,647 @@
+{
+    "pageTitle": "Add Provider",
+    "type": "popup",
+    "formConfig": {
+        "rows": [
+            {
+                "columns":[
+                    {
+                        "width":6,
+                        "height":"2",
+                        "controls": [
+                            {
+                                "label": "Provider Access",
+                                "id": "txtProviderAccess",
+                                "type": "radiobutton",
+                                "options": {
+                                    "dataSource": "",
+                                    "dataSourceType": "static",
+                                    "textField": "textField",
+                                    "valueField": "valueField",
+                                    "list": [
+                                        {
+                                            "textField": "Online",
+                                            "valueField": "online"
+                                        },
+                                        {
+                                            "textField": "Offline",
+                                            "valueField": "offline"
+                                        }
+                                        
+                                    ]
+                                },
+                                "fieldId": "providerAccess",
+                                "placeholder": "Select Provider Access",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+
+                    },
+                    {
+                        "width":6,
+                        "height":"2",
+                        "controls": [
+                            {
+                                "label": "Provider Type",
+                                "id": "txtProviderType",
+                                "type": "select",
+                                "options": {
+                                    "dataSource": "",
+                                    "dataSourceType": "static",
+                                    "textField": "textField",
+                                    "valueField": "valueField",
+                                    "list": [
+                                        {
+                                            "textField": "CST",
+                                            "valueField": "CST"
+                                        },
+                                        {
+                                            "textField": "EST",
+                                            "valueField": "EST"
+                                        },
+                                        {
+                                            "textField": "PST",
+                                            "valueField": "PST"
+                                        },
+                                        {
+                                            "textField": "MT",
+                                            "valueField": "MT"
+                                        },
+                                        {
+                                            "textField": "IST",
+                                            "valueField": "IST"
+                                        }
+                                    ]
+                                },
+                                "fieldId": "providerType",
+                                "placeholder": "Select Provider Type",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+
+                    },
+                    {
+                        "width":6,
+                        "height":"2",
+                        "controls": [
+                            {
+                                "label": "NPI",
+                                "id": "txtNPI",
+                                "type": "text",
+                                "fieldId": "npi",
+                                "placeholder": "NPI",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            } 
+                        ]    
+                    }   
+                ] 
+            },
+            {
+                "columns": [
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "First Name",
+                                "id": "txtName",
+                                "type": "text",
+                                "fieldId": "firstName",
+                                "placeholder": "First Name",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "First Name is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Middle Name",
+                                "id": "txtMiddleName",
+                                "type": "text",
+                                "fieldId": "middleName",
+                                "placeholder": "Middle Name",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Last Name",
+                                "id": "txtLastName",
+                                "type": "text",
+                                "fieldId": "lastName",
+                                "placeholder": "Last Name",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Last Name is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Email",
+                                "id": "txtEmail",
+                                "type": "text",
+                                "fieldId": "email",
+                                "placeholder": "Email Address",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Email is required"
+                                    },
+                                    {
+                                        "type": "email",
+                                        "message": "Please provide valid email"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Mobile",
+                                "id": "txtMobile",
+                                "type": "text",
+                                "fieldId": "mobile",
+                                "placeholder": "Mobile",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 10,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Notes",
+                                "id": "txtNotes",
+                                "type": "textarea",
+                                "fieldId": "notes",
+                                "placeholder": "Notes",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            
+            { 
+                "columns" :[
+
+                {
+                    "width": 4,
+                    "height": "2",
+                    "controls": [
+                        {
+                            "label": "Add Location",
+                            "id": "btnAddLocation",
+                            "type": "button",
+                            "options": [],
+                            "fieldId": "btnAddLocation",
+                            "placeholder": "",
+                            "tooltip": "",
+                            "validations": [],
+                            "isDisabled": false,
+                            "isVisible": true,
+                            "isChangeHandle": true,
+                            "css": ""
+                        }
+                    ]
+                }
+            ]
+        },
+
+            {
+                "columns": [
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Office Name",
+                                "id": "txtOfficeName",
+                                "type": "text",
+                                "fieldId": "officeName",
+                                "placeholder": "Office Name",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Office Name is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Address Line1",
+                                "id": "txtAddressLine1",
+                                "type": "text",
+                                "fieldId": "addressLine1",
+                                "placeholder": "AddressLine1",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Address is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Address Line2",
+                                "id": "txtAddressLine2",
+                                "type": "text",
+                                "fieldId": "addressLine2",
+                                "placeholder": "AddressLine2",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Address is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Zip Code",
+                                "id": "txtZipCode",
+                                "type": "text",
+                                "fieldId": "postalCode",
+                                "placeholder": "Zip Code",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Zip Code is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "City",
+                                "id": "txtCity",
+                                "type": "text",
+                                "fieldId": "city",
+                                "placeholder": "City",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "City is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+
+                ]
+            },
+
+            {
+                "columns": [
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "State",
+                                "id": "txtState",
+                                "type": "select",
+                                "fieldId": "state",
+                                "placeholder": "State",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "State is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": "",
+                                "options": {
+                                    "dataSource": "countries.json",
+                                    "dataSourceType": "json",
+                                    "textField": "name",
+                                    "valueField": "state_code",
+                                    "list": []
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "width": 4,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Phone",
+                                "id": "txtPhone",
+                                "type": "text",
+                                "fieldId": "phone",
+                                "placeholder": "Phone",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Phone is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 2,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Extension",
+                                "id": "txtExtension",
+                                "type": "text",
+                                "fieldId": "extension",
+                                "placeholder": "Extension",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Fax",
+                                "id": "txtFax",
+                                "type": "text",
+                                "fieldId": "fax",
+                                "placeholder": "Fax",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+
+                    },
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Email",
+                                "id": "txtEmail",
+                                "type": "text",
+                                "fieldId": "email",
+                                "placeholder": "Email",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+
+                ]
+            },
+           {
+            "columns": [
+                {
+                    "width": 6,
+                    "height": "2",
+                    "controls": [
+                        {
+                            "label": "Primary Contact Person",
+                            "id": "txtPrimaryContactPerson",
+                            "type": "text",
+                            "fieldId": "primaryContactPerson",
+                            "placeholder": "Primary ContactPerson",
+                            "tooltip": "",
+                            "validations": [],
+                            "isDisabled": false,
+                            "isVisible": true,
+                            "isChangeHandle": true,
+                            "css": "",
+                            "options": {}
+                        }
+                    ]
+                },
+                {
+                    "width": 6,
+                    "height": "2",
+                    "controls": [
+                        {
+                            "label": "Secondry Contact Person",
+                            "id": "txtSecondryContactPerson",
+                            "type": "text",
+                            "fieldId": "secondryContactPerson",
+                            "placeholder": "Secondry ContactPerson",
+                            "tooltip": "",
+                            "validations": [],
+                            "isDisabled": false,
+                            "isVisible": true,
+                            "isChangeHandle": true,
+                            "css": "",
+                            "options": {}
+                        }
+                    ]
+                },
+                {
+                    "width": 12,
+                    "height": "2",
+                    "controls": [
+                        {
+                            "label": "Notes",
+                            "id": "txtNotes",
+                            "type": "text",
+                            "fieldId": "notes",
+                            "placeholder": "Notes",
+                            "tooltip": "",
+                            "validations": [],
+                            "isDisabled": false,
+                            "isVisible": true,
+                            "isChangeHandle": true,
+                            "css": ""
+                        }
+                    ]
+                }
+                
+
+            ]
+                
+           },
+           
+            
+            {
+                "columns": [
+                    {
+                        "width": 4,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Cancel",
+                                "id": "btnCancel",
+                                "type": "button",
+                                "options": [],
+                                "fieldId": "btnCancel",
+                                "placeholder": "",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+
+                     {
+                        "width": 4,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Submit",
+                                "id": "btnSubmit",
+                                "type": "button",
+                                "options": [],
+                                "fieldId": "btnSubmit",
+                                "placeholder": "",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

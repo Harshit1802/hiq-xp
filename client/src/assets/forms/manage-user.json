@@ -1,0 +1,106 @@
+{
+    "pageTitle": "Manage User",
+    "breadcrumbs": [
+        {
+            "menuName": "Dashboard",
+            "url": "/app/landing"
+        },
+        {
+            "menuName": "Users",
+            "url": ""
+        },
+        {
+            "menuName": "Manage User List",
+            "url": ""
+        }
+    ],
+    "pageActions": [
+        {
+            "type": "button",
+            "label": "Add new User",
+            "icon": "plus",
+            "event": {
+                "type": "click",
+                "onevent": "popup",
+                "popupJson": "add-new-user",
+                "popupwidth":"60%"
+            }
+        },
+        {
+            "action": "refresh"
+        },
+        {
+            "action": "export"
+        },
+        {
+            "action": "filter"
+        }
+    ],
+    "filter": [
+        {
+            "name": "searchuser",
+            "type": "textbox",
+            "placeholder": "Search User"
+        },
+        {
+            "name": "selectuserrole",
+            "type": "select",
+            "placeholder": "Select User Role"
+        },
+        {
+            "name": "selectusertype",
+            "type": "select",
+            "placeholder": "Select User Type"
+        }
+     
+        
+    ],
+    "table": {
+        "dataSource":"api/users",
+        "tableColumns": [
+            {
+                "key": "_id",
+                "title": "User Id"
+            },
+            {
+                "key": "username",
+                "title": "User Name"
+            },
+            {
+                "key": "roles",
+                "title": "User Role"
+            },
+            {
+                "key": "usertype",
+                "title": "User Type"
+            },
+           
+            {
+                 "key":"phone",
+                 "title":"Phone No."
+            },
+            { 
+              "key":"email",
+              "title":"Email"
+            },
+           
+            {
+                "key": "action",
+                "title": "Action",
+                "actions":[
+                    {
+                        "type": "Edit",
+                        "label": "Edit",
+                        "icon": "upload",
+                        "isDisabled":"false",
+                        "event": {
+                            "type": "click",
+                            "onevent": "popup",
+                            "popupJson": "manage-user-edit"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

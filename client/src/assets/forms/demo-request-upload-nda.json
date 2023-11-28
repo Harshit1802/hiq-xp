@@ -1,0 +1,74 @@
+{
+    "pageTitle": "Demo Request - Upload NDA",
+    "type": "popup",
+    "popupConfig": {
+        "parentPageJson": "demo-request",
+        "onPopupClose": "refresh",
+        "footerActions": [
+            {
+                "type": "button",
+                "label": "Cancel",
+                "icon": "",
+                "event": {
+                    "type": "click",
+                    "onevent": "closeandrefreshparent",
+                    "api": ""
+                }
+            },
+            {
+                "type": "button",
+                "label": "Save",
+                "icon": "plus",
+                "event": {
+                    "type": "click",
+                    "onevent": "postformdata",
+                    "api": "api/demorequest/upload-nda",
+                    "postSchema":{
+                        "demoRequestId":"[parentId]",
+                        "moduleName":"upload-nda",
+                        "uploadedFiles":"[ndaDocument]"
+                    }
+                    
+                }
+            }
+        ]
+    },
+    "formConfig": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "width": 24,
+                        "controls": [
+                            {
+                                "label": "",
+                                "id": "txtFileUpload",
+                                "type": "fileupload",
+                                "fieldId": "ndaDocument",
+                                "placeholder": "Click or drag file to this area to upload",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "First Name is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": "",
+                                "properties":{
+                                    "multiple":false,
+                                    "extensions":".pdf,.docx"
+                                }
+                            }
+                        ]
+                    }
+                 
+                ]
+            }
+            
+        ]
+        
+    }
+}

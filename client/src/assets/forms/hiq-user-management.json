@@ -1,0 +1,89 @@
+{
+    "pageTitle": "Hiq User Management",
+    "breadcrumbs": [
+        {
+            "menuName": "Dashboard",
+            "url": "/app/landing"
+        },
+        {
+            "menuName": "Users",
+            "url": ""
+        },
+        {
+            "menuName": "Hiq User Managemnet List",
+            "url": ""
+        }
+    ],
+    "pageActions": [
+        {
+            "type": "button",
+            "label": "Add new User",
+            "icon": "plus",
+            "event": {
+                "type": "click",
+                "onevent": "popup",
+                "popupJson": "add-demo-request.json"
+            }
+        },
+        {
+            "action": "refresh"
+        },
+        {
+            "action": "export"
+        },
+        {
+            "action": "filter"
+        }
+    ],
+    "filter": [
+        {
+            "name": "searchuser",
+            "type": "select",
+            "placeholder": "Search User"
+        },
+        {
+            "name": "selectuserrole",
+            "type": "select",
+            "placeholder": "Select User Role"
+        },
+        {
+            "name": "selectusertype",
+            "type": "select",
+            "placeholder": "Select User Type"
+        }
+        
+    ],
+    "table": {
+        "dataSource":"api/users",
+        "tableColumns": [
+            {
+                "key": "userid",
+                "title": "UserId #"
+            },
+            {
+                "key": "username",
+                "title": "User Name"
+            },
+            {
+                "key": "userrole",
+                "title": "User Role"
+            },
+            {
+                "key": "usertype",
+                "title": "User Type"
+            },
+            {
+                "key": "email",
+                "title": "Email"
+            },
+            {
+                "key": "officephone",
+                "title": "Office Phone"
+            },
+            {
+                "key": "action",
+                "title": "Action"
+            }
+        ]
+    }
+}

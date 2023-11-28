@@ -1,0 +1,155 @@
+{
+    "pageTitle": "Record Demo Feedback",
+    "type": "popup",
+    "formConfig": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Agency Status",
+                                "id": "txtAgencyStatus",
+                                "type": "select",
+                                "options": {
+                                    "dataSource": "",
+                                    "dataSourceType": "static",
+                                    "textField": "textField",
+                                    "valueField": "valueField",
+                                    "list": [
+                                        {
+                                            "textField": "CST",
+                                            "valueField": "CST"
+                                        },
+                                        {
+                                            "textField": "EST",
+                                            "valueField": "EST"
+                                        },
+                                        {
+                                            "textField": "PST",
+                                            "valueField": "PST"
+                                        },
+                                        {
+                                            "textField": "MT",
+                                            "valueField": "MT"
+                                        },
+                                        {
+                                            "textField": "IST",
+                                            "valueField": "IST"
+                                        }
+                                    ]
+                                },
+                                "fieldId": "txtAgencyStatus",
+                                "placeholder": "-- Select --",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Agency Status is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 18,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Notes",
+                                "id": "txtNotes",
+                                "type": "textarea",
+                                "fieldId": "notes",
+                                "placeholder": "",
+                                "tooltip": "",
+                                "validations": [],
+                                "options": {},
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Notes",
+                                "id": "txtNotes",
+                                "type": "select",
+                                "fieldId": "notes",
+                                "placeholder": "--Select--",
+                                "tooltip": "",
+                                "validations": [],
+                                "options": {
+                                    "dataSource": "",
+                                    "dataSourceType": "static",
+                                    "textField": "textField",
+                                    "valueField": "valueField",
+                                    "list": [
+                                        {
+                                            "textField": "CST",
+                                            "valueField": "CST"
+                                        },
+                                        {
+                                            "textField": "EST",
+                                            "valueField": "EST"
+                                        },
+                                        {
+                                            "textField": "PST",
+                                            "valueField": "PST"
+                                        },
+                                        {
+                                            "textField": "MT",
+                                            "valueField": "MT"
+                                        },
+                                        {
+                                            "textField": "IST",
+                                            "valueField": "IST"
+                                        }
+                                    ]
+                                },
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Notes View",
+                                "id": "txtNotesView",
+                                "type": "text",
+                                "fieldId": "txtNotesView",
+                                "placeholder": "",
+                                "tooltip": "",
+                                "validations": [],
+                                "options": {},
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            }     
+        ]
+    }
+}

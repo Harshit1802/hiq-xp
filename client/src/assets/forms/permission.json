@@ -1,0 +1,70 @@
+{
+    "pageTitle": "Permissions",
+    
+    "breadcrumbs": [
+        {
+            "menuName": "Dashboard",
+            "url": "/app/landing"
+        },
+        {
+            "menuName": "Permissions",
+            "url": ""
+        }
+    ],
+    "pageActions": [
+        {
+            "type": "button",
+            "label": "Add new Permission",
+            "icon": "add",
+            "event": {
+                "type": "click",
+                "onevent": "popup",
+                "popupJson": "permission-manage",
+                "popupwidth":"60%"
+            }
+        },
+        {
+            "action": "refresh"
+        },
+        {
+            "action": "export"
+        },
+        {
+            "action": "filter"
+        }
+    ],
+    "filter": [
+        {
+            "name": "fullName",
+            "type": "textbox",
+            "placeholder": "Full Name"
+        }
+    ],
+    "table": {
+        "dataSource": "api/permission/permissions",
+        "tableColumns": [
+            {
+                "key": "permissionName",
+                "title": "Permission"
+            },
+            {
+                "key": "action",
+                "title": "",
+                "actions":[
+                    {
+                        "type": "icon-button",
+                        "label": "Edit",
+                        "icon": "upload",
+                        "isDisabled":"false",
+                        "event": {
+                            "type": "click",
+                            "onevent": "popup",
+                            "popupJson": "permission-manage"
+                        }
+                    }
+                    
+                ]
+            }
+        ]
+    }
+}

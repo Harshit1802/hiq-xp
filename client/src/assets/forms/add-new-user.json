@@ -1,0 +1,540 @@
+{
+    "pageTitle": "Add New User",
+    "type": "popup",
+    "popupConfig": {
+        "parentPageJson": "demo-request",
+        "onPopupClose": "refresh",
+        "footerActions": [
+            {
+                "type": "button",
+                "label": "Cancel",
+                "icon": "",
+                "event": {
+                    "type": "click",
+                    "onevent": "closeandrefreshparent",
+                    "api": ""
+                }
+            },
+            {
+                "type": "button",
+                "label": "Save",
+                "icon": "plus",
+                "event": {
+                    "type": "click",
+                    "onevent": "postformdata",
+                    "api": "api/users/addusers"
+                }
+            }
+        ]
+    },
+    "formConfig": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "First Name",
+                                "id": "txtName",
+                                "type": "text",
+                                "fieldId": "firstName",
+                                "placeholder": "First Name",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "First Name is required"
+                                    },
+                                    {
+                                        "type": "minlength",
+                                        "length":"3",
+                                        "message": "First Name should have at least 3 chars"
+                                    },
+                                    {
+                                        "type": "maxlength",
+                                        "length":"30",
+                                        "message": "Max 30 chars allowed"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "MiddleName",
+                                "id": "txt",
+                                "type": "text",
+                                "fieldId": "MiddleName",
+                                "placeholder":"MiddleName",
+                                "tooltip":"",
+                                "validations":[],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Last Name",
+                                "id": "txtLastName",
+                                "type": "text",
+                                "fieldId": "lastName",
+                                "placeholder": "Last Name",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Last Name is required"
+                                    },
+                                    {
+                                        "type": "minlength",
+                                        "length":"3",
+                                        "message": "Last Name should have at least 3 chars"
+                                    },
+                                    {
+                                        "type": "maxlength",
+                                        "length":"30",
+                                        "message": "Max 30 chars allowed"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 8,
+                        "height": "2",
+
+                        "controls": [
+                            {
+                                "label": "IdNumber",
+                                "id": "txtNumber",
+                                "type": "text",
+                                "fieldId": "agencyId",
+                                "placeholder":"IdNumber",
+                                "tooltip":"",
+                                "validations":[],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 8,
+                        "height": "2",
+
+                        "controls": [
+                            {
+                              "label":"Gender",
+                              "id": "txtGender",
+                              "type": "radiobutton",
+                              "fieldId": "gender",
+                               "required": true,
+                               "validations":[],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": "",
+                                "options": {
+                                    "dataSource": "",
+                                    "dataSourceType": "static",
+                                    "textField": "textField",
+                                    "valueField": "valueField",
+                                    "list": [
+                                        {
+                                            "textField": "Male",
+                                            "valueField": "male"
+                                        },
+                                        {
+                                            "textField": "Female",
+                                            "valueField": "female"
+                                        },
+                                        {
+                                            "textField": "Other",
+                                            "valueField": "other"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                    
+                ]
+
+            },
+            {
+                "columns": [
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Date Of Birth",
+                                "id": "txtDateOfBirth",
+                                "type": "date",
+                                "fieldId": "dob",
+                                "placeholder": "MM/DD/YY",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Date of Birth is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "User Name",
+                                "id": "txtUserName",
+                                "type": "text",
+                                "fieldId": "username",
+                                "placeholder": "User Name",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "User Name is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "SSN",
+                                "id": "txtSSN",
+                                "type": "text",
+                                "fieldId": "ssnNumber",
+                                "placeholder": "SSN",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "User Role",
+                                "id": "txtRoleType",
+                                "type": "select",
+                                "fieldId": "roles",
+                                "placeholder": "Role Type",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": "",
+                                "options": {
+                                    "dataSource": "api/users",
+                                    "dataSourceType": "api",
+                                    "textField": "username",
+                                    "valueField": "_id",
+                                    "list": [
+                                        {
+                                            "textField": "Male",
+                                            "valueField": "male"
+                                        },
+                                        {
+                                            "textField": "Female",
+                                            "valueField": "female"
+                                        },
+                                        {
+                                            "textField": "Other",
+                                            "valueField": "other"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "User Type",
+                                "id": "txtUserType",
+                                "type": "select",
+                                "fieldId": "userType",
+                                "placeholder": "User Type",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Address Line 1",
+                                "id": "txtAddressLine1",
+                                "type": "text",
+                                "fieldId": "address",
+                                "placeholder": "Address Line 1",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Address Line 1  is required"
+                                    },
+                                    {
+                                        "type": "minlength",
+                                        "length":"10",
+                                        "message": "Address Line 1 should have at least 10 chars"
+                                    },
+                                    {
+                                        "type": "maxlength",
+                                        "length":"100",
+                                        "message": "Max 100 chars allowed"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Addres Line 2",
+                                "id": "txtAddresLine2",
+                                "type": "text",
+                                "fieldId": "address",
+                                "placeholder": "Address Line 2",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Zip Code",
+                                "id": "txtZipCode",
+                                "type": "text",
+                                "fieldId": "pinNumber",
+                                "placeholder": "Zip Code",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Zip Code is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "City",
+                                "id": "txtCity",
+                                "type": "text",
+                                "fieldId": "city",
+                                "placeholder": "City",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "City is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "State",
+                                "id": "txtState",
+                                "type": "select",
+                                "fieldId": "state",
+                                "placeholder": "State",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "State is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": "",
+                                "options": {
+                                    "dataSource": "countries.json",
+                                    "dataSourceType": "json",
+                                    "textField": "name",
+                                    "valueField": "state_code",
+                                    "list": []
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            
+            {
+                "columns": [
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Primary Contact Number",
+                                "id": "txtPrimaryContactNumber",
+                                "type": "text",
+                                "fieldId": "phone",
+                                "placeholder": "Primary Contact Number",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Primary Contact Number is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Secondary Contact Number",
+                                "id": "txtSecondaryContactNumber",
+                                "type": "text",
+                                "fieldId": "secondaryContactNumber",
+                                "placeholder": "Secondary Contact Number",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Email",
+                                "id": "txtEmail",
+                                "type": "text",
+                                "fieldId": "email",
+                                "placeholder": "Email Address",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Email is required"
+                                    },
+                                    {
+                                        "type": "email",
+                                        "message": "Please provide valid email"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

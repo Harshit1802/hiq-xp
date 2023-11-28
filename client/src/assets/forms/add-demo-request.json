@@ -1,0 +1,441 @@
+{
+    "pageTitle": "Demo Request",
+    "type": "popup",
+    "popupConfig": {
+        "parentPageJson": "demo-request",
+        "onPopupClose": "refresh",
+        "footerActions": [
+            {
+                "type": "button",
+                "label": "Cancel",
+                "icon": "",
+                "event": {
+                    "type": "click",
+                    "onevent": "closeandrefreshparent",
+                    "api": ""
+                }
+            },
+            {
+                "type": "button",
+                "label": "Save",
+                "icon": "plus",
+                "event": {
+                    "type": "click",
+                    "onevent": "postformdata",
+                    "api": "api/demorequest/agency-demoRequest"
+                }
+            }
+        ]
+    },
+    "formConfig": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "First Name",
+                                "id": "txtName",
+                                "type": "text",
+                                "fieldId": "firstName",
+                                "placeholder": "First Name",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "First Name is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Last Name",
+                                "id": "txtLastName",
+                                "type": "text",
+                                "fieldId": "lastName",
+                                "placeholder": "Last Name",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Last Name is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Job Title",
+                                "id": "txtJobTitle",
+                                "type": "text",
+                                "fieldId": "jobTitle",
+                                "placeholder": "Job Title",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Job Title is required"
+                                    },
+                                    {
+                                        "type": "minlength",
+                                        "length":"2",
+                                        "message": "Job Title should have at least 2 chars"
+                                    },
+                                    {
+                                        "type": "maxlength",
+                                        "length":"30",
+                                        "message": "Max 30 chars allowed"
+                                    }
+
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Company Name",
+                                "id": "txtCompanyName",
+                                "type": "text",
+                                "fieldId": "companyName",
+                                "placeholder": "Company Name",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Company Name is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 24,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Address",
+                                "id": "txtAddress",
+                                "type": "text",
+                                "fieldId": "address",
+                                "placeholder": "Address",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Address is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 24,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Street Address",
+                                "id": "txtStreetAddress",
+                                "type": "text",
+                                "fieldId": "streetAddress",
+                                "placeholder": "",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "City",
+                                "id": "txtCity",
+                                "type": "text",
+                                "fieldId": "city",
+                                "placeholder": "City",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "City is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "State",
+                                "id": "txtState",
+                                "type": "select",
+                                "fieldId": "state",
+                                "placeholder": "State",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "State is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": "",
+                                "options": {
+                                    "dataSource": "countries.json",
+                                    "dataSourceType": "json",
+                                    "textField": "name",
+                                    "valueField": "state_code",
+                                    "list": []
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Zip Code",
+                                "id": "txtZipCode",
+                                "type": "number",
+                                "fieldId": "postalCode",
+                                "placeholder": "Zip Code",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Zip Code is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Phone Number",
+                                "id": "txtPhoneNumber",
+                                "type": "text",
+                                "fieldId": "phone",
+                                "placeholder": "Phone Number",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Phone Number is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Email",
+                                "id": "txtEmail",
+                                "type": "text",
+                                "fieldId": "email",
+                                "placeholder": "Email Address",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Email is required"
+                                    },
+                                    {
+                                        "type": "email",
+                                        "message": "Please provide valid email"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 24,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Website",
+                                "id": "txtWebsite",
+                                "type": "text",
+                                "fieldId": "website",
+                                "placeholder": "https://",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": " "
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "When are you available for demo?",
+                                "id": "txtAvailableForDemo",
+                                "type": "textarea",
+                                "fieldId": "txtAvailableForDemo",
+                                "placeholder": "When are you available for demo?",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Time Zone",
+                                "id": "txtTimeZone",
+                                "type": "select",
+                                "options": {
+                                    "dataSource": "",
+                                    "dataSourceType": "static",
+                                    "textField": "textField",
+                                    "valueField": "valueField",
+                                    "list": [
+                                        {
+                                            "textField": "CST",
+                                            "valueField": "CST"
+                                        },
+                                        {
+                                            "textField": "EST",
+                                            "valueField": "EST"
+                                        },
+                                        {
+                                            "textField": "PST",
+                                            "valueField": "PST"
+                                        },
+                                        {
+                                            "textField": "MT",
+                                            "valueField": "MT"
+                                        },
+                                        {
+                                            "textField": "IST",
+                                            "valueField": "IST"
+                                        }
+                                    ]
+                                },
+                                "fieldId": "timeZone",
+                                "placeholder": "Select Time Zone",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Timezone is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

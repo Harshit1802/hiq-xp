@@ -1,0 +1,237 @@
+{
+    "pageTitle": "Schedule Demo Request",
+    "type": "popup",
+    "popupConfig": {
+        "parentPageJson": "demo-request",
+        "onPopupClose": "refresh",
+        "footerActions": [
+            {
+                "type": "button",
+                "label": "Cancel",
+                "icon": "",
+                "event": {
+                    "type": "click",
+                    "onevent": "closeandrefreshparent",
+                    "api": ""
+                }
+            },
+            {
+                "type": "button",
+                "label": "Save",
+                "icon": "plus",
+                "event": {
+                    "type": "click",
+                    "onevent": "postformdata",
+                    "api": "api/schedule/demoschedule"
+                }
+            }
+        ]
+    },
+    "formConfig": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Demo Given BY Primary Person ",
+                                "id": "txtPrimaryPerson",
+                                "type": "select",
+                                "fieldId": "demoGivenByUserId",
+                                "placeholder": "--Select--",
+                                "tooltip": "",
+                                "validations": [],
+                                "options": {
+                                    "dataSource": "api/schedule/demoschedule",
+                                    "dataSourceType": "api",
+                                    "textField": "createdBy",
+                                    "valueField": "_id",
+                                    "list": []
+                                },
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Demo Given BY Alternate Person",
+                                "id": "txtAlternatePerson",
+                                "type": "select",
+                                "fieldId": "demoGivenByAlternativeId",
+                                "placeholder": "--Select--",
+                                "tooltip": "",
+                                "validations": [],
+                                "options": {
+                                    "dataSource": "api/schedule/demoschedule",
+                                    "dataSourceType": "api",
+                                    "textField": "createdBy",
+                                    "valueField": "_id",
+                                    "list": []
+                                },
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Date",
+                                "id": "txtDate",
+                                "type": "date",
+                                "fieldId": "demoScheduleDate",
+                                "placeholder": "",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Address is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Time From(CST))",
+                                "id": "txtTimeFrom",
+                                "type": "text",
+                                "fieldId": "demoScheduleTimeFrom",
+                                "placeholder": "",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Time is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Time To (CST)",
+                                "id": "txtTimeTO",
+                                "type": "text",
+                                "fieldId": "demoScheduleTimeTo",
+                                "placeholder": "",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Time is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 6,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Duration (In Hours)",
+                                "id": "txtDate",
+                                "type": "text",
+                                "fieldId": "demoDuration",
+                                "placeholder": "",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 24,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Meeting URL",
+                                "id": "txtMeetingUrl",
+                                "type": "text",
+                                "fieldId": "meeting",
+                                "placeholder":"",
+                                "tooltip":"",
+                                "validations":[
+                                    {
+                                        "type": "required",
+                                        "message": "Meeting URL is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 24,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Description",
+                                "id": "txtDescription",
+                                "type": "textarea",
+                                "fieldId": "demoDuration",
+                                "placeholder": "City",
+                                "tooltip": "",
+                                "validations": [],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            }    
+        ]
+    }
+}

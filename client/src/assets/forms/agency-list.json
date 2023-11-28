@@ -1,0 +1,83 @@
+{
+    "pageTitle": "Agency List",
+    "breadcrumbs": [
+        {
+            "menuName": "Dashboard",
+            "url": "/app/landing"
+        },
+        {
+            "menuName": "Users",
+            "url": ""
+        },
+        {
+            "menuName": "Agency List",
+            "url": ""
+        }
+    ],
+    "pageActions": [
+        {
+            "type": "button",
+            "label": "Add new User",
+            "icon": "plus",
+            "event": {
+                "type": "click",
+                "onevent": "popup",
+                "popupJson": "add-demo-request.json"
+            }
+        },
+        {
+            "action": "refresh"
+        },
+        {
+            "action": "export"
+        },
+        {
+            "action": "filter"
+        }
+    ],
+    "filter": [
+        {
+            "name": "search",
+            "type": "text",
+            "placeholder": "Search"
+        },
+        { 
+            "name":"uploadbaa",
+            "type":"select",
+            "placeholder":"All"
+        }
+        
+    ],
+    "table": {
+        "dataSource":"api/users",
+        "tableColumns": [
+            {
+                "key": "accountnumber",
+                "title": "Account Number"
+            },
+            {
+                "key": "legalname",
+                "title": "Legal Name"
+            },
+            {
+                "key": "doingbusinessas",
+                "title": "Doing Business As"
+            },
+            {
+                "key": "contractperiod",
+                "title": "Contract Period"
+            },
+            {
+                "key": "status",
+                "title": "Status"
+            },
+            {
+                "key": "action",
+                "title": "Action"
+            }
+            
+
+
+        ]
+    }
+}

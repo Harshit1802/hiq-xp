@@ -1,0 +1,12 @@
+<div style="display: flex;min-height: 2rem;">
+    <input #fileUpload type="file" hidden (input)="onInput($event)" (change)="onFileSelected($event)"
+    [(ngModel)]="inputFileName" [accept]="accept">
+    Drag the file here or click here to choose
+</div>
+<div style="display: flex;">
+    <button type="button" style="width: 100%; position: relative;" mat-raised-button color="primary" (click)="onClick($event)">
+        <mat-icon>add</mat-icon>
+        {{chooseLabel}}
+    </button>
+    <p *ngIf="selectedFileName" style="position: absolute; top: 80px; width: fit-content;">{{ selectedFileName }}</p>
+</div>

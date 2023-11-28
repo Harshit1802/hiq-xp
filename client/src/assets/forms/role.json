@@ -1,0 +1,70 @@
+{
+    "pageTitle": "Roles",
+    
+    "breadcrumbs": [
+        {
+            "menuName": "Dashboard",
+            "url": "/app/landing"
+        },
+        {
+            "menuName": "Roles",
+            "url": ""
+        }
+    ],
+    "pageActions": [
+        {
+            "type": "button",
+            "label": "Add new Role",
+            "icon": "add",
+            "event": {
+                "type": "click",
+                "onevent": "popup",
+                "popupJson": "role-manage",
+                "popupwidth":"60%"
+            }
+        },
+        {
+            "action": "refresh"
+        },
+        {
+            "action": "export"
+        },
+        {
+            "action": "filter"
+        }
+    ],
+    "filter": [
+        {
+            "name": "fullName",
+            "type": "textbox",
+            "placeholder": "Full Name"
+        }
+    ],
+    "table": {
+        "dataSource": "api/role/roles",
+        "tableColumns": [
+            {
+                "key": "roleName",
+                "title": "Role"
+            },
+            {
+                "key": "action",
+                "title": "",
+                "actions":[
+                    {
+                        "type": "icon-button",
+                        "label": "Edit",
+                        "icon": "upload",
+                        "isDisabled":"false",
+                        "event": {
+                            "type": "click",
+                            "onevent": "popup",
+                            "popupJson": "role-manage"
+                        }
+                    }
+                    
+                ]
+            }
+        ]
+    }
+}

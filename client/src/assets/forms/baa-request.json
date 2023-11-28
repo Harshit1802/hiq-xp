@@ -1,0 +1,76 @@
+{
+    "pageTitle": "BAA Request",
+    "breadcrumbs": [
+        {
+            "menuName": "Dashboard",
+            "url": "/app/landing"
+        },
+        {
+            "menuName": "Users",
+            "url": ""
+        },
+        {
+            "menuName": "BAA Request List",
+            "url": ""
+        }
+    ],
+    "pageActions": [
+        {
+            "type": "button",
+            "label": "Add new User",
+            "icon": "plus",
+            "event": {
+                "type": "click",
+                "onevent": "popup",
+                "popupJson": "add-demo-request.json"
+            }
+        },
+        {
+            "action": "refresh"
+        },
+        {
+            "action": "export"
+        },
+        {
+            "action": "filter"
+        }
+    ],
+    "filter": [
+        {
+            "name": "searchbaa",
+            "type": "text",
+            "placeholder": "Search BAA"
+        },
+        { 
+            "name":"uploadbaa",
+            "type":"button",
+            "placeholder":"UploadBAA"
+        }
+        
+    ],
+    "table": {
+        "dataSource":"api/users",
+        "tableColumns": [
+            {
+                "key": "agencylegalname",
+                "title": "Agency Legal Name"
+            },
+            {
+                "key": "agencystatus",
+                "title": "Agency Status"
+            },
+            {
+                "key": "agencyadmin",
+                "title": "Agency Admin"
+            },
+            {
+                "key": "status",
+                "title": "Staus"
+            },
+            {
+                "key": "action",
+                "title": "Action"
+            }
+        ]
+    }
+}

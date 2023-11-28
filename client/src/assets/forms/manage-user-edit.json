@@ -1,0 +1,57 @@
+{
+    "pageTitle": "Manage Role",
+    "type": "popup",
+    "popupConfig": {
+        "parentPageJson": "role",
+        "onPopupClose": "refresh",
+        "footerActions": [
+            {
+                "type": "button",
+                "label": "Cancel",
+                "icon": "",
+                "event": {
+                    "type": "click",
+                    "onevent": "closeandrefreshparent",
+                    "api": ""
+                }
+            },
+            {
+                "type": "button",
+                "label": "Save",
+                "icon": "plus",
+                "event": {
+                    "type": "click",
+                    "onevent": "postformdata",
+                    "api": "api/users"
+                }
+            }
+        ]
+    },
+    "formConfig": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "width": 12,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "User Name",
+                                "id": "txtUserName",
+                                "type": "text",
+                                "fieldId": "username",
+                                "placeholder": "User Name",
+                                "tooltip": "",
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": false,
+                                "css": ""
+                            }
+                        ]
+                    }
+                    
+                ]
+            }
+        ]
+    }
+}

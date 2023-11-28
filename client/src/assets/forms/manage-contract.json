@@ -1,0 +1,153 @@
+{
+    "pageTitle": "Manage Agencies>Contracts",
+    "type": "",
+    "formConfig": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Agency",
+                                "id": "txtAgency",
+                                "type": "select",
+                                "options": {
+                                    "dataSource": "",
+                                    "dataSourceType": "static",
+                                    "textField": "textField",
+                                    "valueField": "valueField",
+                                    "list": [
+                                        {
+                                            "textField": "CST",
+                                            "valueField": "CST"
+                                        },
+                                        {
+                                            "textField": "EST",
+                                            "valueField": "EST"
+                                        },
+                                        {
+                                            "textField": "PST",
+                                            "valueField": "PST"
+                                        },
+                                        {
+                                            "textField": "MT",
+                                            "valueField": "MT"
+                                        },
+                                        {
+                                            "textField": "IST",
+                                            "valueField": "IST"
+                                        }
+                                    ]
+                                },
+                                "fieldId": "txtAgency",
+                                "placeholder": "-- Select --",
+                                "tooltip": "",
+                                "validations": [
+                                    {
+                                        "type": "required",
+                                        "message": "Agency Status is required"
+                                    }
+                                ],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Contract Period From",
+                                "id": "txtContractPeriodFrom",
+                                "type": "date",
+                                "fieldId": "contractperiodfrom",
+                                "placeholder": "",
+                                "tooltip": "",
+                                "validations": [],
+                                "options": {},
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Contract Period To",
+                                "id": "txtContractPeriodTo",
+                                "type": "date",
+                                "fieldId": "contractperiodto",
+                                "placeholder": "",
+                                "tooltip": "",
+                                "validations": [],
+                                "options": {},
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Duration",
+                                "id": "txtDuration",
+                                "type": "text",
+                                "fieldId": "duration",
+                                "placeholder": "",
+                                "tooltip": "",
+                                "validations": [],
+                                "options": {},
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 8,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Document Upload",
+                                "id": "txtDocumentUpload",
+                                "type": "fileupload",
+                                "fieldId": "documentupload",
+                                "placeholder": "Choose file",
+                                "tooltip": "",
+                                "validations": [],
+                                "options": {},
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]  
+            } 
+             
+         ]    
+    }
+}

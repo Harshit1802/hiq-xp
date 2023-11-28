@@ -1,0 +1,90 @@
+{
+    "pageTitle": "Users List",
+    "breadcrumbs": [
+        {
+            "menuName": "Dashboard",
+            "url": "/app/landing"
+        },
+        {
+            "menuName": "Users",
+            "url": ""
+        },
+        {
+            "menuName": "User List",
+            "url": ""
+        }
+    ],
+    "pageActions": [
+        {
+            "type": "button",
+            "label": "Add new User",
+            "icon": "",
+            "event": {
+                "type": "click",
+                "onevent": "popup",
+                "popupJson": ""
+            }
+        },
+        {
+            "action": "refresh"
+        },
+        {
+            "action": "export"
+        },
+        {
+            "action": "filter"
+        }
+    ],
+    "filter": [
+        {
+            "name": "fullName",
+            "type": "textbox",
+            "placeholder": "Full Name"
+        },
+        {
+            "name": "Email",
+            "type": "textbox",
+            "placeholder": "Email"
+        },
+        {
+            "name": "Status",
+            "type": "textbox",
+            "placeholder": "Status"
+        },
+        {
+            "name": "Status1",
+            "type": "textbox",
+            "placeholder": "Status1"
+        },
+        {
+            "name": "Status2",
+            "type": "date",
+            "placeholder": "Status1"
+        }
+    ],
+    "table": {
+        "dataSource":"api/users",
+        "tableColumns": [
+            {
+                "key": "name",
+                "title": "Name"
+            },
+            {
+                "key": "email",
+                "title": "Email"
+            },
+            {
+                "key": "phone",
+                "title": "Phne"
+            },
+            {
+                "key": "address",
+                "title": "Address"
+            },
+            {
+                "key": "action",
+                "title": ""
+            }
+        ]
+    }
+}

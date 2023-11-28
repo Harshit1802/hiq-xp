@@ -1,0 +1,96 @@
+[
+    {
+        "menuName":"Dashboard",
+        "icon":"",
+        "href":"",
+        "tooltip":"",
+        "children":[]
+    },
+    {
+        "menuName":"User Management",
+        "icon":"",
+        "href":"/page/manage-user",
+        "children":[]
+    },
+    {
+        "menuName":"Manage Agencies",
+        "icon":"",
+        "href":"",
+        "children":[
+            {
+                "menuName":"Demo Request",
+                "icon":"",
+                "href":"/page/demo-request",
+                "children":[]
+            },
+            {
+                "menuName":"BAA",
+                "icon":"",
+                "href":"/page/baa-request",
+                "children":[]
+            },
+            {
+                "menuName":"Service Agreement",
+                "icon":"",
+                "href":"",
+                "children":[]
+            },
+            {
+                "menuName":"Complete Registration",
+                "icon":"",
+                "href":"/page/complete-agency-registration",
+                "children":[]
+            },
+            {
+                "menuName":"Agencies",
+                "icon":"",
+                "href":"/page/agency-list",
+                "children":[]
+            },
+            {
+                "menuName":"Invoices",
+                "icon":"",
+                "href":"/page/invoices",
+                "children":[]
+            }
+        ]
+    },
+    {
+        "menuName":"Configuration",
+        "icon":"",
+        "href":"",
+        "children":[]
+    },
+    {
+        "menuName":"Master Management",
+        "icon":"",
+        "href":"",
+        "children":[
+            {
+                "menuName":"Permissions",
+                "icon":"",
+                "href":"/page/permission",
+                "children":[]
+            },
+            {
+                "menuName":"Role",
+                "icon":"",
+                "href":"/page/role",
+                "children":[]
+            }
+        ]
+    },
+    {
+        "menuName":"Provider Portal",
+        "icon":"",
+        "href":"/page/add-provider-portal",
+        "children":[]
+    },
+    {
+        "menuName":"Test",
+        "icon":"",
+        "href":"/page/test",
+        "children":[]
+    }
+
+]

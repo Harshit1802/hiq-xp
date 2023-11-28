@@ -1,0 +1,138 @@
+{
+    "pageTitle": "Demo Request",
+    
+    "breadcrumbs": [
+        {
+            "menuName": "Dashboard",
+            "url": "/app/landing"
+        },
+        {
+            "menuName": "Users",
+            "url": ""
+        },
+        {
+            "menuName": "User List",
+            "url": ""
+        }
+    ],
+    "pageActions": [
+        {
+            "type": "button",
+            "label": "Add new Request",
+            "icon": "add",
+            "event": {
+                "type": "click",
+                "onevent": "popup",
+                "popupJson": "add-demo-request",
+                "popupwidth":"60%"
+            }
+        },
+        {
+            "action": "refresh"
+        },
+        {
+            "action": "export"
+        },
+        {
+            "action": "filter"
+        }
+    ],
+    "filter": [
+        {
+            "name": "fullName",
+            "type": "textbox",
+            "placeholder": "Full Name"
+        },
+        {
+            "name": "Email",
+            "type": "textbox",
+            "placeholder": "Email"
+        },
+        {
+            "name": "Status",
+            "type": "textbox",
+            "placeholder": "Status"
+        },
+        {
+            "name": "Status1",
+            "type": "textbox",
+            "placeholder": "Status1"
+        },
+        {
+            "name": "Status2",
+            "type": "date",
+            "placeholder": "Status1"
+        }
+    ],
+    "table": {
+        "dataSource": "api/demorequest/agency-demoRequest",
+        "tableColumns": [
+            {
+                "key": "companyName",
+                "title": "Company Name"
+            },
+            {
+                "key": "email",
+                "title": "Email"
+            },
+            {
+                "key": "phone",
+                "title": "Phone"
+            },
+            {
+                "key": "address",
+                "title": "Address"
+            },
+            {
+                "key": "action",
+                "title": "",
+                "actions":[
+                    {
+                        "type": "icon-button",
+                        "label": "Upload NDA",
+                        "icon": "upload",
+                        "isDisabled":"false",
+                        "event": {
+                            "type": "click",
+                            "onevent": "popup",
+                            "popupJson": "demo-request-upload-nda"
+                        }
+                    },
+                    {
+                        "type": "icon-button",
+                        "label": "Download NDA",
+                        "icon": "download",
+                        "isDisabled":"false",
+                        "event": {
+                            "type": "click",
+                            "onevent": "api-get",
+                            "api": "download-demo-request-nda"
+                        }
+                    },
+                    {
+                        "type": "icon-button",
+                        "label": "Schedule Demo Request",
+                        "icon": "schedule",
+                        "event": {
+                            "type": "click",
+                            "onevent": "popup",
+                            "popupJson": "schedule-demo-request",
+                            "popupwidth":"60%"
+                        }
+                    },
+                    {
+                        "type": "icon-button",
+                        "label": "Demo Feedback",
+                        "icon": "feedback",
+                        "isDisabled":"isDemoScheduled==false",
+                        "event": {
+                            "type": "click",
+                            "onevent": "popup",
+                            "popupJson": "demo-request-feedback"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

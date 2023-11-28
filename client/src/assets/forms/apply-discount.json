@@ -1,0 +1,86 @@
+{
+    "pageTitle": "Apply Discount",
+    "breadcrumbs": [
+        {
+            "menuName": "Dashboard",
+            "url": "/app/landing"
+        },
+        {
+            "menuName": "Users",
+            "url": ""
+        },
+        {
+            "menuName": "BAA Request List",
+            "url": ""
+        }
+    ],
+    "pageActions": [
+        {
+            "type": "button",
+            "label": "Add new User",
+            "icon": "plus",
+            "event": {
+                "type": "click",
+                "onevent": "popup",
+                "popupJson": "add-demo-request.json"
+            }
+        },
+        {
+            "action": "refresh"
+        },
+        {
+            "action": "export"
+        },
+        {
+            "action": "filter"
+        }
+    ],
+    "filter": [
+        {
+            "name": "searchbaa",
+            "type": "text",
+            "placeholder": "Search BAA"
+        },
+        { 
+            "name":"uploadbaa",
+            "type":"button",
+            "placeholder":"UploadBAA"
+        }
+        
+    ],
+    "table": {
+        "dataSource":"api/users",
+        "tableColumns": [
+            {
+                "key": "select",
+                "title": "Select"
+            },
+            {
+                "key": "discount",
+                "title": "Discount"
+            },
+            {
+                "key": "agencyadmin",
+                "title": "Agency Admin"
+            },
+            {
+                "key": "percentage",
+                "title": "Percentage"
+            },
+            {
+                "key": "value",
+                "title": "Value"
+            },
+            {
+                "key": "validityperiod",
+                "title": "Validity Period"
+            },
+            {
+                "key": "comments",
+                "title": "Comments"
+            }
+
+
+        ]
+    }
+}

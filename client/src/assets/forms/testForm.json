@@ -1,0 +1,114 @@
+{
+    "pageTitle": "Demo Page",
+    "form": {
+        "pageTitle": "",
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "width": 8,
+                        "height": "2",
+
+                        "controls": [
+                            {
+                                "label": "Name",
+                                "id": "txtName",
+                                "controlType": "text",
+                                "fieldId": "name",
+                                "placeholder":"Name",
+                                "tooltip":"",
+                                "validations":[],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 4,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Email",
+                                "id": "txt",
+                                "controlType": "text",
+                                "fieldId": "EMAIL",
+                                "placeholder":"Email",
+                                "tooltip":"",
+                                "validations":[],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": 4,
+                        "height": "2",
+
+                        "controls": [
+                            {
+                                "label": "Name1",
+                                "id": "txtName1",
+                                "controlType": "text",
+                                "fieldId": "name1",
+                                "placeholder":"Name1",
+                                "tooltip":"",
+                                "validations":[],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 4,
+                        "height": "2",
+
+                        "controls": [
+                            {
+                                "label": "Name2",
+                                "id": "txtName2",
+                                "controlType": "text",
+                                "fieldId": "name2",
+                                "placeholder":"Name2",
+                                "tooltip":"",
+                                "validations":[],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    },
+                    {
+                        "width": 4,
+                        "height": "2",
+                        "controls": [
+                            {
+                                "label": "Email 1",
+                                "id": "txt11",
+                                "controlType": "text",
+                                "fieldId": "EMAIL1",
+                                "placeholder":"Email1",
+                                "tooltip":"",
+                                "validations":[],
+                                "isDisabled": false,
+                                "isVisible": true,
+                                "isChangeHandle": true,
+                                "css": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

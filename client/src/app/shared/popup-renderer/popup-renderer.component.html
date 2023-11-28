@@ -1,0 +1,14 @@
+<h2 mat-dialog-title *ngIf="pageAction && page">{{page.pageTitle}}</h2>
+<mat-dialog-content class="mat-typography">
+  <error-panel *ngIf="errors" [errors]="errors"></error-panel>
+  <div *ngIf="page && page.formConfig">
+    <dynamic-form [config]="page.formConfig" #form="dynamicForm" (submit)="formSubmit($event)"  [clickSubject]="clickSubject">
+    </dynamic-form>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end" *ngIf="page && page.popupConfig && page.popupConfig.footerActions">
+  <div *ngFor="let action of page.popupConfig.footerActions">
+    <button mat-button (click)="popupActionClick(action,$event);">{{action.label}}</button>
+  </div>
+  
+</mat-dialog-actions>
