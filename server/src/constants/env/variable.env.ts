@@ -9,7 +9,7 @@ class Variable {
 
   public static readonly PORT: number = Number(process.env.PORT)!
 
-  public static readonly DATABASE_URL: string = process.env.DATABASE_URL!
+  public static readonly DATABASE_URL: string ="mongodb+srv://xenpark:xenpark@xp-crud-cluster0.vkjz3vp.mongodb.net/?retryWrites=true&w=majority"; //process.env.DATABASE_URL! 
 
   public static readonly JWT_SECRET: string = process.env.JWT_SECRET!
 

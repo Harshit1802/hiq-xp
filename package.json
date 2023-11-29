@@ -6,7 +6,7 @@
   "scripts": {
     "build-server": "cd server && npm build",
   "install-server": "cd server && npm install",
-  "start-server": "cd server && node dist/index.js",
+  "start-server": "cd server && npm start",
   "install-client": "cd client && npm install",
   "build-client":"cd client && npm run build",
   "start-client": "cd client && npm run start"
